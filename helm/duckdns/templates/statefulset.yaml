@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: {{ .Values.appName }}
+  namespace: {{ .Values.appName }}
+  labels:
+    app: {{ .Values.appName }}
+    service: {{ .Values.serviceName }}
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: {{ .Values.appName }}
+      service: {{ .Values.serviceName }}
+  serviceName: {{ .Values.serviceName }}
+  template:
+    metadata:
+      labels:
+        app: {{ .Values.appName }}
+        service: {{ .Values.serviceName }}
+    spec:
+      serviceAccountName: {{ .Values.serviceAccountName }}
+      containers:
+        - name: {{ .Chart.Name }}
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          resources:
+            {{- toYaml .Values.resources | nindent 12 }}
+          env:
+            - name: TOKEN
+              value: {{ .Values.token }}
+            - name: SUBDOMAINS
+              value: {{ .Values.subdomains }}
