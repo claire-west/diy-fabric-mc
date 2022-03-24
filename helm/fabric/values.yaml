@@ -111,9 +111,9 @@ minecraftServer:
   # One of: peaceful, easy, normal, and hard
   difficulty: hard
   # A comma-separated list of player names to whitelist.
-  whitelist: MoonlitClaire,Sheep_Mistress,Lexilcoatl,AnimeDork39,Robin_is_an_Owl,Gwynerear
+  whitelist:
   # A comma-separated list of player names who should be admins.
-  ops: MoonlitClaire,AnimeDork39
+  ops:
   # A server icon URL for server listings. Auto-scaled and transcoded.
   icon:
   # Max connected players.
@@ -147,7 +147,7 @@ minecraftServer:
   # Max view distance (in chunks).
   viewDistance: 16
   # Define this if you want a specific map generation seed.
-  levelSeed:
+  levelSeed: 4077089944251226611
   # One of: creative, survival, adventure, spectator
   gameMode: survival
   # Message of the Day
@@ -161,11 +161,11 @@ minecraftServer:
   generatorSettings:
   worldSaveName: world
   # If set, this URL will be downloaded at startup and used as a starting point
-  downloadWorldUrl:
+  downloadWorldUrl: http://192.168.0.100/world_trimmed.zip
   # force re-download of server file
   forceReDownload: false
   # If set, the modpack at this URL will be downloaded at startup
-  downloadModpackUrl: https://github.com/claire-west/diy-fabric-mc/raw/main/mods.zip
+  downloadModpackUrl: http://192.168.0.100/fabric_mods.zip
   # If true, old versions of downloaded mods will be replaced with new ones from downloadModpackUrl
   removeOldMods: false
   # Check accounts against Minecraft account service.
