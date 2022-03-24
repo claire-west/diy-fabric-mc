@@ -165,7 +165,7 @@ minecraftServer:
   # force re-download of server file
   forceReDownload: false
   # If set, the modpack at this URL will be downloaded at startup
-  downloadModpackUrl: https://github.com/CaffeineMC/lithium-fabric/releases/download/mc1.17.1-0.7.5/lithium-fabric-mc1.17.1-0.7.5.jar
+  downloadModpackUrl: https://github.com/claire-west/diy-fabric-mc/raw/main/mods.zip
   # If true, old versions of downloaded mods will be replaced with new ones from downloadModpackUrl
   removeOldMods: false
   # Check accounts against Minecraft account service.
